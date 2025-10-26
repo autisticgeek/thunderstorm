@@ -38,7 +38,10 @@ export default function StormSimulator() {
     setTimeout(() => {
       const index = Math.floor(intensity * thunderFiles.length);
       const thunder = thunderFiles[index];
-      playSound(`/sounds/${thunder}`, thunderRefs, intensity);
+
+      // Simulate distance-based volume loss
+      const volume = Math.max(0.05, Math.pow(intensity, 2));
+      playSound(`/sounds/${thunder}`, thunderRefs, volume);
     }, delay);
   }, [playSound]);
 
