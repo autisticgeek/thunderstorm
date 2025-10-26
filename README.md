@@ -8,7 +8,6 @@ A browser-based thunderstorm experience built with React and Vite. This immersiv
 
 This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and distribute this software for personal or commercial purposes, provided that the original license is included.
 
-
 ## ⚙️ Tech Stack
 
 | Tool     | Purpose                         |
@@ -19,10 +18,13 @@ This project is licensed under the [MIT License](LICENSE). You are free to use, 
 
 ## 🚀 Features
 
-- ⚡ Flash-to-thunder syncing: Thunder sounds are selected and delayed based on flash intensity.
-- 🔊 Dynamic audio mixing: Volume and timing adapt to storm conditions.
-- 🖱️ Idle cursor hiding in fullscreen mode.
-- 🧠 Modular architecture with declarative components and maintainable state logic.
+- ⚡ **Flash-to-thunder syncing**: Thunder sounds are selected and delayed based on flash intensity.
+- 🔊 **Dynamic audio mixing**: Volume and timing adapt to storm conditions, simulating distance-based attenuation.
+- 🖱️ **Idle cursor hiding**: Cursor disappears after inactivity for immersive fullscreen mode.
+- 🧠 **Modular architecture**: Declarative components and maintainable state logic.
+- 🔓 **Sound unlock overlay**: Thunder audio is gated behind user interaction (click or spacebar), with a 10-second opt-out window for visuals-only mode.
+- ⌨️ **Spacebar mute toggle**: Pressing space toggles thunder audio on/off.
+- 🧼 **Ref-based mute logic**: Prevents stale closures from triggering thunder after mute is engaged.
 
 ## 📦 Scripts
 
@@ -44,4 +46,3 @@ npm install
 
 # Start the dev server
 npm run dev
-```
