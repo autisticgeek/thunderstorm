@@ -1,16 +1,47 @@
-# React + Vite
+# 🌩️ Thunderstorm Simulator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A browser-based thunderstorm experience built with React and Vite. This immersive simulation syncs thunder sounds with lightning flashes, creating a realistic and atmospheric storm loop — perfect for ambient installations, Halloween setups, or just geeking out over weather phenomena.
 
-Currently, two official plugins are available:
+**GitHub Repository:** [autisticgeek/thunderstorm](https://github.com/autisticgeek/thunderstorm)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📝 License
 
-## React Compiler
+This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and distribute this software for personal or commercial purposes, provided that the original license is included.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+## ⚙️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Tool     | Purpose                         |
+| -------- | ------------------------------- |
+| React 19 | UI framework                    |
+| Vite 7   | Fast dev/build tooling          |
+| ESLint   | Code linting and quality checks |
+
+## 🚀 Features
+
+- ⚡ Flash-to-thunder syncing: Thunder sounds are selected and delayed based on flash intensity.
+- 🔊 Dynamic audio mixing: Volume and timing adapt to storm conditions.
+- 🖱️ Idle cursor hiding in fullscreen mode.
+- 🧠 Modular architecture with declarative components and maintainable state logic.
+
+## 📦 Scripts
+
+| Command           | Description                     |
+| ----------------- | ------------------------------- |
+| `npm run dev`     | Launches the Vite dev server    |
+| `npm run build`   | Builds the production bundle    |
+| `npm run preview` | Previews the production build   |
+| `npm run lint`    | Runs ESLint across the codebase |
+
+## 🧰 Getting Started
+
+```bash
+# Clone the repo
+git clone https://github.com/autisticgeek/thunderstorm
+
+# Install dependencies
+npm install
+
+# Start the dev server
+npm run dev
+```

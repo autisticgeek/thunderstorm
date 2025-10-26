@@ -14,13 +14,10 @@ const thunderFiles = [
   "thunder11.mp3",
 ];
 
-const rainFiles = ["rain1.mp3", "rain2.mp3"];
-
 export default function StormSimulator() {
   const [flash, setFlash] = useState(false);
   const [flashIntensity, setFlashIntensity] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
-  const rainRefs = useRef([]);
+
   const thunderRefs = useRef([]);
 
   const playSound = useCallback((src, refArray, volume = 1) => {
@@ -32,8 +29,6 @@ export default function StormSimulator() {
   }, []);
 
   const simulateStorm = useCallback(() => {
-    if (!isPlaying) return;
-
     const intensity = Math.random(); // 0 (dim) to 1 (bright)
     setFlashIntensity(intensity);
     setFlash(true);
@@ -45,7 +40,7 @@ export default function StormSimulator() {
       const thunder = thunderFiles[index];
       playSound(`/sounds/${thunder}`, thunderRefs, intensity);
     }, delay);
-  }, [isPlaying, playSound]);
+  }, [playSound]);
 
   useEffect(() => {
     const stormLoop = () => {
@@ -84,7 +79,9 @@ export default function StormSimulator() {
     <div
       style={{
         height: "100vh",
-        backgroundColor: flash ? `rgba(0,255,255,${flashIntensity})` : "black",
+        backgroundColor: flash
+          ? `rgba(180, 210, 255, ${flashIntensity})` // pale blue
+          : "black",
         transition: "background-color 0.2s ease",
         position: "relative",
       }}
