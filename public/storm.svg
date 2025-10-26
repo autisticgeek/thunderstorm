@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="lightning" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff44f"/>
+      <stop offset="100%" stop-color="#fdd835"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="black" stroke-width="2">
+    <path d="M20 40c-6 0-10-4-10-10s4-10 10-10c1-6 6-10 12-10s11 4 12 10c6 0 10 4 10 10s-4 10-10 10H20z" fill="#cfd8dc"/>
+    <polygon points="30,40 36,40 32,50 38,50 28,64 34,52 28,52" fill="url(#lightning)" stroke="none"/>
+  </g>
+</svg>
